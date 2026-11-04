@@ -1,0 +1,172 @@
+html {
+ scroll-behavior: smooth;
+ scroll-padding-top: 90px; /* para que el menú no tape el título */
+}
+
+body {
+ font-family: Arial, sans-serif;
+ font-size: 18px;
+ line-height: 1.6;
+ color: #111;
+ margin: 0;
+}
+
+a {
+ color: #0000ff;
+}
+
+a:focus {
+ outline: 3px solid #7da63a;
+ outline-offset: 2px;
+}
+
+/* ---------- MENÚ ---------- */
+header {
+ position: sticky;
+ top: 0;
+ background: #245525;
+}
+
+.barra {
+ max-width: 1000px;
+ margin: 0 auto;
+ padding: 0 20px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+}
+
+.logo {
+ color: #fff;
+ font-weight: bold;
+ text-decoration: none;
+ padding: 12px 0;
+}
+
+.logo small {
+ font-weight: normal;
+}
+
+nav a {
+ display: inline-block;
+ padding: 14px 12px; /* botón táctil de 48 px o más */
+ color: #fff;
+ font-weight: bold;
+ text-decoration: none;
+ border-bottom: 4px solid transparent;
+}
+
+nav a:hover {
+ text-decoration: underline;
+}
+
+nav a.activo {
+ border-bottom-color: #7da63a;
+}
+
+/* ---------- SECCIÓN ENTRENADOR ---------- */
+#entrenador {
+ max-width: 1000px;
+ margin: 0 auto;
+ padding: 40px 20px;
+}
+
+/* Título con línea debajo, como en el mockup */
+h2 {
+ font-size: 30px;
+ margin: 0 0 20px;
+ padding-bottom: 10px;
+ border-bottom: 3px solid #245525;
+}
+
+h3 {
+ margin: 0 0 8px;
+}
+
+h4 {
+ margin: 20px 0 10px;
+}
+
+/* Dos columnas */
+.contenedor {
+ display: flex;
+ gap: 40px;
+ align-items: flex-start;
+}
+
+.izquierda {
+ width: 40%;
+}
+
+.derecha {
+ width: 60%;
+}
+
+/* Foto con borde gris */
+.izquierda img {
+ display: block;
+ width: 100%;
+ border: 3px solid #808080;
+}
+
+.izquierda h3 {
+ margin-top: 15px;
+ font-size: 22px;
+}
+
+.izquierda p {
+ margin: 6px 0;
+}
+
+.cargo {
+ margin: 0 0 15px;
+ color: #444;
+}
+
+.derecha p {
+ margin: 0 0 12px;
+}
+
+/* Frase con barra lateral */
+blockquote {
+ margin: 20px 0;
+ padding-left: 15px;
+ border-left: 6px solid #7da63a;
+ font-style: italic;
+}
+
+/* Trayectoria: caja con el año + texto */
+.hito {
+ display: flex;
+ gap: 15px;
+ align-items: flex-start;
+ margin-bottom: 12px;
+}
+
+.anio {
+ flex-shrink: 0;
+ min-width: 90px;
+ padding: 2px 8px;
+ border: 3px solid #111;
+ text-align: center;
+ font-weight: bold;
+}
+
+/* ---------- TABLET Y MÓVIL: una columna ---------- */
+@media (max-width: 800px) {
+ .contenedor {
+ flex-direction: column;
+ }
+ .izquierda,
+ .derecha {
+ width: 100%;
+ }
+ .izquierda img {
+ max-width: 400px;
+ }
+ .barra {
+ justify-content: center;
+ }
+}
+ 
